@@ -70,6 +70,18 @@ ion-header {
   }
 }
 
+ion-list {
+  border-radius: 10px 10px 0px 0px;
+
+  background-color: var(--ion-color-light);
+
+  ion-item {
+    --background: transparent;
+    --box-shadow: none;
+    border-bottom: 1px solid #ccc;
+  }
+}
+
 
 ion-footer {
   ion-slide {
