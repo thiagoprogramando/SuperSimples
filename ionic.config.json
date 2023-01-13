@@ -1,0 +1,7 @@
+{
+  "name": "superSimples",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

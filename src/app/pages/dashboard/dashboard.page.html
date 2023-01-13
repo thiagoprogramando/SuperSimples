@@ -1,0 +1,82 @@
+<!-- Header -->
+<ion-header class="ion-no-border">
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-center">
+      <span>Olá, Thiago!</span>
+    </ion-title>
+    <ion-buttons slot="secondary" color="light">
+      <ion-button color="light" fill="clear" size="small">
+        <ion-icon slot="icon-only" name="notifications-outline"></ion-icon>
+      </ion-button>
+      <ion-button color="light" fill="clear" size="small">
+        <ion-icon slot="icon-only" name="person-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<!-- Dashboard -->
+<ion-content class="ion-no-padding ion-no-margin" color="primary">
+  <ion-card color="light" class="ion-padding ion-no-margin home">
+
+
+    <ion-item class="saldo">
+      <ion-button slot="start">
+        <ion-icon name="eye-outline"></ion-icon>
+      </ion-button>
+      <ion-button slot="end">
+        <h3>R$ 109,85</h3>
+      </ion-button>
+    </ion-item>
+
+    <ion-grid class="ion-margin-top">
+      <ion-row >
+        <ion-col *ngFor="let option of menuOptions" class="ion-text-center menu" size="4">
+          <ion-card class="ion-padding" [href]="option.href">
+            <ion-icon color="primary" size="large" [name]="option.icon"></ion-icon>
+          </ion-card>
+          <span>{{ option.text }}</span>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-slides class="opacity-transition ion-margin-top ion-no-margin">
+      <ion-slide *ngFor="let option of menuOptions">
+          <ion-card [color]="option.color" class="ion-text-left promo">
+            <ion-grid>
+              <ion-row>
+                <ion-col size="8">
+                  <ion-card-header>
+                    <ion-card-subtitle>Seguro celular</ion-card-subtitle>
+                    <ion-card-title>O melhor seguro para você uau!</ion-card-title>
+                  </ion-card-header>
+                </ion-col>
+                <ion-col size="4" class="bc" style="background-image: url('https://picsum.photos/200/300');"></ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-card>
+      </ion-slide>
+    </ion-slides>
+
+
+
+
+
+  </ion-card>
+</ion-content>
+
+<!-- Footer -->
+<ion-footer class="ion-no-border">
+  <ion-toolbar class="ion-no-margin ion-padding-vertical" color="primary">
+    <ion-slides class="opacity-transition" [options]="slidesOptions">
+
+      <ion-slide *ngFor="let option of options">
+        <div class="container ion-text-left">
+          <ion-icon color="success" [name]="option.icon"></ion-icon>
+          <span>{{ option.text }}</span>
+        </div>
+      </ion-slide>
+
+    </ion-slides>
+  </ion-toolbar>
+</ion-footer>
