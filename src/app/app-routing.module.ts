@@ -34,6 +34,10 @@ const routes: Routes = [
     path: 'wallet',
     loadChildren: () => import('./pages/wallet/wallet.module').then( m => m.WalletPageModule)
   },
+  {
+    path: 'pix',
+    loadChildren: () => import('./pages/pix/pix.module').then( m => m.PixPageModule)
+  },
 
 ];
 

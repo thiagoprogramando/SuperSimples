@@ -23,7 +23,7 @@ export class DashboardPage implements OnInit {
     { icon: 'barcode-outline',            text: 'Pagamentos', href: 'pay', color: 'dark' },
     { icon: 'receipt-outline',            text: 'Extrato',    href: 'extrato', color: 'success' },
     { icon: 'wallet-outline',             text: 'Carteira',   href: 'wallet', color: 'warning' },
-    { icon: 'qr-code-outline',            text: 'Pix',        href: '', color: 'danger' },
+    { icon: 'qr-code-outline',            text: 'Pix',        href: 'pix', color: 'danger' },
     { icon: 'call-outline',               text: 'Recargas',   href: '', color: 'dark'},
     { icon: 'storefront-outline',         text: 'Parceiros',  href: '', color: 'danger'},
   ];

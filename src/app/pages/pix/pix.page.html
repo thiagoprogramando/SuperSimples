@@ -1,0 +1,64 @@
+<!-- Header -->
+<ion-header mode="md" class="ion-no-border">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start" color="light">
+      <ion-button href="dashboard"><ion-icon name="arrow-back-circle-outline"></ion-icon></ion-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center"> Pix </ion-title>
+    <ion-buttons slot="end">
+      <ion-button href="extrato">
+        <ion-icon name="receipt-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-no-padding ion-no-margin">
+
+  <div class="login-form ion-padding">
+    <div class="form-input">
+      <ion-item>
+        <ion-select placeholder="Tipo" okText="Confirmar" cancelText="Cancelar">
+          <ion-select-option value="1">CPF/CNPJ</ion-select-option>
+          <ion-select-option value="2">Email</ion-select-option>
+          <ion-select-option value="3">Chave</ion-select-option>
+          <ion-select-option value="4">QrCode</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-input type="number" (focusout)="consultaPix()" placeholder="Chave"></ion-input>
+      </ion-item>
+    </div>
+    <div id="dadosPix" class="d-none">
+      <div class="form-input">
+        <ion-item>
+          <ion-input type="text" placeholder="Para"></ion-input>
+        </ion-item>
+      </div>
+      <div class="form-input">
+        <ion-item>
+          <ion-input type="text" placeholder="Instituição"></ion-input>
+        </ion-item>
+      </div>
+      <div class="form-input">
+        <ion-item>
+          <ion-input type="text" placeholder="CPF/CNPJ"></ion-input>
+        </ion-item>
+      </div>
+      <div class="form-input">
+        <ion-item>
+          <ion-input type="text" placeholder="Valor"></ion-input>
+        </ion-item>
+      </div>
+    </div>
+  </div>
+
+</ion-content>
+
+<!-- Footer -->
+<ion-footer class="ion-no-border">
+  <ion-toolbar class="ion-no-margin" color="primary">
+    <ion-button mode="ios" fill="outline" color="success" expand="block" class="ion-margin">Enviar</ion-button>
+  </ion-toolbar>
+</ion-footer>
+
