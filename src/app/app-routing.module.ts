@@ -30,6 +30,10 @@ const routes: Routes = [
     path: 'extrato',
     loadChildren: () => import('./pages/extrato/extrato.module').then( m => m.ExtratoPageModule)
   },
+  {
+    path: 'wallet',
+    loadChildren: () => import('./pages/wallet/wallet.module').then( m => m.WalletPageModule)
+  },
 
 ];
 

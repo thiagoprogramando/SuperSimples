@@ -22,7 +22,7 @@ export class DashboardPage implements OnInit {
   public menuOptions: Array<any> = [
     { icon: 'barcode-outline',            text: 'Pagamentos', href: 'pay', color: 'dark' },
     { icon: 'receipt-outline',            text: 'Extrato',    href: 'extrato', color: 'success' },
-    { icon: 'wallet-outline',             text: 'Carteira',   href: '', color: 'warning' },
+    { icon: 'wallet-outline',             text: 'Carteira',   href: 'wallet', color: 'warning' },
     { icon: 'qr-code-outline',            text: 'Pix',        href: '', color: 'danger' },
     { icon: 'call-outline',               text: 'Recargas',   href: '', color: 'dark'},
     { icon: 'storefront-outline',         text: 'Parceiros',  href: '', color: 'danger'},
