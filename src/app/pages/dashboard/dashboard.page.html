@@ -2,7 +2,7 @@
 <ion-header mode="md" class="ion-no-border">
   <ion-toolbar color="primary">
     <ion-title class="ion-text-center">
-      <span>Olá, Thiago!</span>
+      <span>Thiago César...</span>
     </ion-title>
     <ion-buttons slot="secondary" color="light">
       <ion-button color="light" fill="clear" size="small">
@@ -33,7 +33,7 @@
       <ion-row >
         <ion-col *ngFor="let option of menuOptions" class="ion-text-center menu" size="4">
           <ion-card class="ion-padding" [href]="option.href">
-            <ion-icon color="primary" size="large" [name]="option.icon"></ion-icon>
+            <ion-icon color="primary" [name]="option.icon"></ion-icon>
           </ion-card>
           <span>{{ option.text }}</span>
         </ion-col>
