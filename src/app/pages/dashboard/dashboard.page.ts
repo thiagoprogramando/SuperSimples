@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { AnimationController, Animation, Platform, Gesture, GestureController, GestureDetail } from '@ionic/angular';
 
@@ -12,11 +13,11 @@ export class DashboardPage implements OnInit {
   @ViewChild('swipeDown')   swipeDown: any;
 
   public options: Array<any> = [
-    { icon: 'person-add-outline',         text: 'Indicar amigos' },
-    { icon: 'document-attach-outline',    text: 'Cert CNPJ' },
-    { icon: 'document-text-outline',      text: 'Emitir NFe' },
-    { icon: 'calendar-number-outline',    text: 'DAS' },
-    { icon: 'information-circle-outline', text: 'Borderô'},
+    { icon: 'person-add-outline',         text: 'Indicar amigos', href: 'das'},
+    { icon: 'document-attach-outline',    text: 'Cert CNPJ',      href: 'das'},
+    { icon: 'document-text-outline',      text: 'Emitir NFe',     href: 'das'},
+    { icon: 'calendar-number-outline',    text: 'DAS',            href: 'das'},
+    { icon: 'information-circle-outline', text: 'Borderô',        href: 'das'},
   ];
 
   public menuOptions: Array<any> = [
@@ -31,10 +32,14 @@ export class DashboardPage implements OnInit {
   public slidesOptions: any = { slidesPerView: 3, freeMode: true };
 
 
-  constructor(private animationCtrl: AnimationController) {
+  constructor(private animationCtrl: AnimationController, private router: Router) {
   }
 
   ngOnInit() {
+  }
+
+  go(page: any) {
+    this.router.navigate(['/' + page]);
   }
 
 }

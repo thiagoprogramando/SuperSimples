@@ -105,10 +105,10 @@
     <ion-slides class="opacity-transition" [options]="slidesOptions">
 
       <ion-slide *ngFor="let option of options">
-        <div class="container ion-text-left">
+        <ion-card (click)="go(option.href)" class="container ion-text-left">
           <ion-icon color="success" [name]="option.icon"></ion-icon>
           <span>{{ option.text }}</span>
-        </div>
+        </ion-card>
       </ion-slide>
 
     </ion-slides>
