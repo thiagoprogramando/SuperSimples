@@ -1,0 +1,71 @@
+<!-- Header -->
+<ion-header mode="md" class="ion-no-border">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button><ion-icon name="arrow-back-outline"></ion-icon></ion-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">
+      <span>NFE</span>
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button><ion-icon name="business-outline"></ion-icon></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<!-- Dashboard -->
+<ion-content class="ion-no-padding ion-no-margin">
+
+  <p class="ion-margin ion-text-center">Tomador do serviço</p>
+  <ion-item>
+    <ion-label position="floating">CPF/CNPJ</ion-label>
+    <ion-input type="number"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Nome/Razão Social</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">E-mail</ion-label>
+    <ion-input type="email"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Telefone</ion-label>
+    <ion-input type="number"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">CEP</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Número</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-select placeholder="Item da lista de serviços">
+      <ion-select-option value="apples">Apples</ion-select-option>
+      <ion-select-option value="oranges">Oranges</ion-select-option>
+      <ion-select-option value="bananas">Bananas</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-datetime presentation="date"></ion-datetime>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Valor</ion-label>
+    <ion-input type="number"></ion-input>
+  </ion-item>
+
+  <div class="ion-text-center ion-margin">
+    <ion-button>EMITIR NFE</ion-button>
+  </div>
+
+</ion-content>

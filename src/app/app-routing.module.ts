@@ -23,6 +23,27 @@ const routes: Routes = [
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
+  {
+    path: 'das',
+    loadChildren: () => import('./pages/das/das.module').then( m => m.DasPageModule)
+  },  {
+    path: 'nfe',
+    loadChildren: () => import('./pages/nfe/nfe.module').then( m => m.NfePageModule)
+  },
+  {
+    path: 'pay',
+    loadChildren: () => import('./pages/pay/pay.module').then( m => m.PayPageModule)
+  },
+  {
+    path: 'extrato',
+    loadChildren: () => import('./pages/extrato/extrato.module').then( m => m.ExtratoPageModule)
+  },
+  {
+    path: 'pix',
+    loadChildren: () => import('./pages/pix/pix.module').then( m => m.PixPageModule)
+  },
+
+
 ];
 
 @NgModule({
