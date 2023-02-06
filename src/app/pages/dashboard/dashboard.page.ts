@@ -13,20 +13,20 @@ export class DashboardPage implements OnInit {
   @ViewChild('swipeDown')   swipeDown: any;
 
   public options: Array<any> = [
-    { icon: 'person-add-outline',         text: 'Indicar amigos', href: 'das'},
-    { icon: 'document-attach-outline',    text: 'Cert CNPJ',      href: 'das'},
-    { icon: 'document-text-outline',      text: 'Emitir NFe',     href: 'das'},
+    { icon: 'person-add-outline',         text: 'Indicar amigos', href: 'share'},
+    { icon: 'document-attach-outline',    text: 'Cert CNPJ',      href: 'cnpj'},
+    { icon: 'document-text-outline',      text: 'Emitir NFe',     href: 'nfe'},
     { icon: 'calendar-number-outline',    text: 'DAS',            href: 'das'},
-    { icon: 'information-circle-outline', text: 'Borderô',        href: 'das'},
+    { icon: 'information-circle-outline', text: 'Borderô',        href: 'bordero'},
   ];
 
   public menuOptions: Array<any> = [
-    { icon: 'barcode-outline',            text: 'Pagamentos', href: '', color: 'dark' },
-    { icon: 'receipt-outline',            text: 'Extrato', href: '', color: 'success' },
-    { icon: 'wallet-outline',             text: 'Carteira', href: '', color: 'warning' },
-    { icon: 'qr-code-outline',            text: 'Pix', href: '', color: 'danger' },
-    { icon: 'call-outline',               text: 'Recargas', href: '', color: 'dark'},
-    { icon: 'storefront-outline',         text: 'Parceiros', href: '', color: 'danger'},
+    { icon: 'barcode-outline',            text: 'Pagamentos', href: 'pay',      color: 'dark' },
+    { icon: 'receipt-outline',            text: 'Extrato',    href: 'extrato',  color: 'success' },
+    { icon: 'wallet-outline',             text: 'Carteira',   href: '',         color: 'warning' },
+    { icon: 'qr-code-outline',            text: 'Pix',        href: 'pix',      color: 'danger' },
+    { icon: 'call-outline',               text: 'Recargas',   href: '',         color: 'dark'},
+    { icon: 'storefront-outline',         text: 'Parceiros',  href: '',         color: 'danger'},
   ];
 
   public slidesOptions: any = { slidesPerView: 3, freeMode: true };

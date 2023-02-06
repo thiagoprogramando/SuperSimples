@@ -31,13 +31,7 @@ ion-header {
   border: 1px solid #ccc;
   border-radius: 20px;
 
-  ion-button {
-    --background: transparent;
-    --box-shadow: none;
-    --border: none;
-
-    color: var(--ion-color-success);
-  }
+  color: var(--ion-color-success);
 }
 
 .menu {

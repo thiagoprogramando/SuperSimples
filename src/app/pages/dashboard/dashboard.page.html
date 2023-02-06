@@ -20,18 +20,13 @@
   <ion-card color="light" class="ion-padding ion-no-margin home">
 
 
-    <ion-item class="saldo">
-      <ion-button slot="start">
-        <ion-icon name="eye-outline"></ion-icon>
-      </ion-button>
-      <ion-button slot="end">
-        <h3>R$ 109,85</h3>
-      </ion-button>
-    </ion-item>
+    <div class="saldo ion-text-center">
+      <h3>R$ 109,85</h3>
+    </div>
 
     <ion-grid class="ion-margin-top">
       <ion-row >
-        <ion-col *ngFor="let option of menuOptions" class="ion-text-center menu" size="4">
+        <ion-col *ngFor="let option of menuOptions" class="ion-text-center menu" size="6">
           <ion-card class="ion-padding" [href]="option.href">
             <ion-icon color="primary" size="large" [name]="option.icon"></ion-icon>
           </ion-card>
@@ -60,7 +55,7 @@
 
 
     <ion-list lines="none" class="ion-no-margin ion-margin-top">
-      <ion-item button href="" detail="true">
+      <ion-item detail="false">
         <ion-icon name="receipt-outline" slot="start"></ion-icon>
         <ion-label>
           <h3>Últimas transações</h3>
