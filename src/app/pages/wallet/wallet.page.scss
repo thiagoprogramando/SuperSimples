@@ -1,0 +1,17 @@
+
+.saldo {
+  --background: transparent;
+  box-shadow: none;
+
+  border: 1px solid #ccc;
+  border-radius: 20px;
+
+  color: var(--ion-color-success);
+}
+
+ion-list {
+  margin-top: 10%;
+
+  --background: transparent;
+  box-shadow: none;
+}
