@@ -16,17 +16,14 @@ const routes: Routes = [
     loadChildren: () => import('./pages/dashboard/dashboard.module').then( m => m.DashboardPageModule)
   },
   {
-    path: 'signup',
-    loadChildren: () => import('./signup/signup.module').then( m => m.SignupPageModule)
-  },
-  {
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
   {
     path: 'das',
     loadChildren: () => import('./pages/das/das.module').then( m => m.DasPageModule)
-  },  {
+  },
+  {
     path: 'nfe',
     loadChildren: () => import('./pages/nfe/nfe.module').then( m => m.NfePageModule)
   },
@@ -45,7 +42,11 @@ const routes: Routes = [
   {
     path: 'wallet',
     loadChildren: () => import('./pages/wallet/wallet.module').then( m => m.WalletPageModule)
+  },  {
+    path: 'dados',
+    loadChildren: () => import('./pages/dados/dados.module').then( m => m.DadosPageModule)
   },
+
 
 
 ];
