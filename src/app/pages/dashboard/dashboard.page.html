@@ -5,15 +5,45 @@
       <span>Olá, Thiago!</span>
     </ion-title>
     <ion-buttons slot="secondary" color="light">
-      <ion-button color="light" fill="clear" size="small">
+      <ion-button (click)="setOpen(true)" color="light" fill="clear" size="small">
         <ion-icon slot="icon-only" name="notifications-outline"></ion-icon>
       </ion-button>
-      <ion-button color="light" fill="clear" size="small">
+      <ion-button (click)="perfil()" color="light" fill="clear" size="small">
         <ion-icon slot="icon-only" name="person-circle-outline"></ion-icon>
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
+
+<!-- Notificações -->
+<ion-modal [isOpen]="isModalOpen">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Notificações</ion-title>
+        <ion-buttons slot="end">
+          <ion-button (click)="setOpen(false)"><ion-icon name="close-outline"></ion-icon></ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+      <ion-item button detail="true">
+        <ion-icon color="danger" name="download-outline" slot="start"></ion-icon>
+        <ion-label>
+          <h3>Pix enviado</h3>
+          <p>R$ 70,00</p>
+        </ion-label>
+      </ion-item>
+      <ion-item button detail="true">
+        <ion-icon color="success" name="chevron-up-circle-outline" slot="start"></ion-icon>
+        <ion-label>
+          <h3>Compra Voucher Ifood Card</h3>
+          <p>R$ 70,00</p>
+        </ion-label>
+      </ion-item>
+    </ion-content>
+  </ng-template>
+</ion-modal>
 
 <!-- Dashboard -->
 <ion-content class="ion-no-padding ion-no-margin" color="primary">
@@ -27,7 +57,7 @@
     <ion-grid class="ion-margin-top">
       <ion-row >
         <ion-col *ngFor="let option of menuOptions" class="ion-text-center menu" size="6">
-          <ion-card class="ion-padding" [href]="option.href">
+          <ion-card class="ion-padding" (click)="go(option.href)">
             <ion-icon color="primary" size="large" [name]="option.icon"></ion-icon>
           </ion-card>
           <span>{{ option.text }}</span>

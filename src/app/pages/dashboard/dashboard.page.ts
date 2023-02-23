@@ -12,6 +12,12 @@ export class DashboardPage implements OnInit {
   @ViewChild('background')  background: any;
   @ViewChild('swipeDown')   swipeDown: any;
 
+  isModalOpen = false;
+
+  setOpen(isOpen: boolean) {
+    this.isModalOpen = isOpen;
+  }
+
   public options: Array<any> = [
     { icon: 'person-add-outline',         text: 'Indicar amigos', href: 'share'},
     { icon: 'document-attach-outline',    text: 'Cert CNPJ',      href: 'cnpj'},
@@ -40,6 +46,10 @@ export class DashboardPage implements OnInit {
 
   go(page: any) {
     this.router.navigate(['/' + page]);
+  }
+
+  perfil(){
+    this.router.navigate(['dados']);
   }
 
 }
